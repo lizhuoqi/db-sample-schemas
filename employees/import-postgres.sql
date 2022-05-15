@@ -17,9 +17,9 @@ select current_timestamp as start_stamp \gset
 
 SELECT 'CREATING DATABASE STRUCTURE' as doing;
 
-\i drop.sql
-\i tables.sql
-\i views.sql
+\i ./sql/drop.sql
+\i ./sql/tables.sql
+\i ./sql/views.sql
 
 SELECT 'LOADING departments' as doing;
 \copy departments from data/departments.csv delimiter ',' csv header;

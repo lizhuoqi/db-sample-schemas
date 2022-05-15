@@ -16,11 +16,11 @@ SET foreign_key_checks = 0;
 SELECT 'CREATING DATABASE STRUCTURE' as doing;
 
 select 'Dropping everything' as doing;
-source drop.sql
+source ./sql/drop.sql
 select 'Creating tables' as doing;
-source tables.sql
+source ./sql/tables.sql
 select 'Creating views' as doing;
-source views.sql
+source ./sql/views.sql
 select '' as " ";
 
 SELECT 'LOADING departments' as doing;
