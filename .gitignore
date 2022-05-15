@@ -1,2 +1,5 @@
-/temp
+temp/
+data/
+.DS_store
 *.sqlite
+*.csv
