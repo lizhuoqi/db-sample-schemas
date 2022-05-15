@@ -4,9 +4,7 @@ views:
 	v_current_dept_emp
 */
 
--- create views
 -- sqlite3 has no "create or replace view"
-drop view v_emp_latest_date;
 create view v_emp_latest_date as
 SELECT emp_no AS emp_no
      , max( from_date ) AS from_date
@@ -15,7 +13,6 @@ FROM   dept_emp
 GROUP BY emp_no;
 
 -- shows only the current department for each employee
-drop view v_current_dept_emp;
 create view v_current_dept_emp as
 select l.emp_no    AS emp_no
      , d.dept_no   AS dept_no

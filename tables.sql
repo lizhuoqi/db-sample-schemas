@@ -7,12 +7,7 @@ tables:
     employees
     departments
 */
-DROP TABLE IF EXISTS dept_emp;
-drop table if exists dept_manager;
-drop table if exists titles;
-drop table if exists salaries;
-drop table if exists employees;
-drop table if exists departments;
+
 
 /*!50503 set default_storage_engine = InnoDB */;
 /*!50503 select CONCAT('storage engine: ', @@default_storage_engine) as INFO */;

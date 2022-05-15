@@ -10,7 +10,9 @@ select 'now' as key, current_timestamp as value;
 
 SELECT 'CREATING DATABASE STRUCTURE' as doing;
 
+.read drop.sql
 .read tables.sql
+.read views.sql
 
 SELECT 'LOADING departments' as doing;
 .import --csv --skip 1  data/departments.csv departments
