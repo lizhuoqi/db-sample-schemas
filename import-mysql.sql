@@ -1,3 +1,6 @@
+-- usage: mysql --user=root -sN < import-mysql.sql
+--        or mysql --user=root -sN and `\. import-mysql.sql`
+
 DROP DATABASE IF EXISTS employees1;
 CREATE DATABASE employees1;
 use employees1;

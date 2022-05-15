@@ -1,4 +1,7 @@
--- 
+-- usage: psql < import-postgres.sql
+--        or
+--        psql and `\i import-postgres.sql`
+
 -- query with no header and rows count.
 -- \pset tuples_only on
 \t on

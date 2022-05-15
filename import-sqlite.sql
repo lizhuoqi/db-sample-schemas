@@ -1,3 +1,6 @@
+-- usage: sqlite3 employees.sqlite
+-- and execute command `.read import-sqlite.sql` in sqlite interpretor cli.
+
 -- sqlite foreign key support is off by default
 PRAGMA foreign_keys = ON;   
 -- store temp table in memory, not on disk
@@ -36,3 +39,5 @@ from   variable
 where  key = 'now';
 
 drop table variable;
+
+.quit
