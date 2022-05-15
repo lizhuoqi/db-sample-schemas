@@ -27,9 +27,10 @@ CREATE TABLE employees (
     hire_date   DATE            NOT NULL,
     PRIMARY KEY (emp_no)
 );
-
 -- mysql has enum type
-/*! alter table employees modify gender ENUM ('M','F')  NOT NULL */
+
+/*! alter table employees 
+    modify gender ENUM ('M','F')  NOT NULL */;
 
 CREATE TABLE departments (
     dept_no     CHAR(4)         NOT NULL,
