@@ -17,6 +17,7 @@ Some examples are derived from MySQL or postgres. In order to make SQL as genera
 * PostgreSQL
 
 > Why not Oracle, SQL Server, DB2? 🤔
+> 
 > Because the current main purpose of this project is to teach, for example, how to write SQL in the database, develop views, functions, etc., to train the thinking of data development. In practical work, the deployment of databases is usually undertaken by specialized personnel, and there are personnel or teams specialized in IT environment deployment. Deployment skills are not the purpose of this project. For those who do not usually install and deploy, the operation is too difficult, and it will take up more resources when running on a personal desktop notebook.
 >
 > Perhaps in future versions, the corresponding versions of these commercial database services will be provided.

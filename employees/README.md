@@ -17,7 +17,7 @@ The original database is from [Employees Sample Database][mysql sample employees
 > Giuseppe Masia made the relational schema and Patrick Crews exported the data in relational format.
 >
 > The database contains about 300,000 employee records with 2.8 million salary entries. The export data is 167 MB, which is not huge, but heavy enough to be non-trivial for testing.
-
+> 
 > The data was generated, and as such there are inconsistencies and subtle problems. Rather than removing them, we decided to leave the contents untouched, and use these issues as data cleaning exercises.
 >
 > -- [where-it-comes-from][where is comes from]
@@ -25,11 +25,11 @@ The original database is from [Employees Sample Database][mysql sample employees
 
 ### Differences from the original
 
-[x] *employees.sql* used
-[x] used data from *load_\*.dump* files
-[x] Data has been reordered randomly
-[] unused views and functions in objects.sql
-[] The *test_\*.sh* tests in the original code base cannot be executed
+* *employees.sql* used
+* used data from *load_\*.dump* files
+* Data has been reordered randomly
+* unused views and functions in objects.sql
+* The *test_\*.sh* tests in the original code base cannot be executed
 
 ### Prerequisites
 
@@ -226,7 +226,7 @@ If you have logged in under mysql cli, you can do this
 
 <details>
   <summary>
-    Example of results
+    Results
   </summary>
   
   ````
@@ -268,16 +268,15 @@ If you have logged in under mysql cli, you can do this
 
 </details>
 
-### Free statement
+### DISCLAIMER
 
 The data in the example is fabricated and it does not correspond to anyone in the real world. Any similarity is purely coincidental.
 
 ### Licensing
 
-This work is licensed under the [Attribution-Share Alike 3.0 Unlocalized Version (CC BY-SA 3.0)][license] license.
-To view a copy of this license, please visit
-https://creativecommons.org/licenses/by-sa/3.0/deed.en.
+This work is licensed under the [Attribution-Share Alike 3.0 Unlocalized Version (CC BY-SA 3.0)][cc-by-sa] license.
 
+[![CC BY-SA 3.0][cc-by-sa-image]][cc-by-sa]
 
 
 [license]: https://creativecommons.org/licenses/by-sa/3.0/deed.zh
@@ -287,3 +286,9 @@ https://creativecommons.org/licenses/by-sa/3.0/deed.en.
 [er employees ori]: ./images/employees-schema.png
 [er employees]: ./images/er-employees-en.png
 [er employees structure]: https://dev.mysql.com/doc/employee/en/sakila-structure.html
+
+[cc-by-sa]: https://creativecommons.org/licenses/by-sa/3.0/
+[cc-by-sa-image]: https://licensebuttons.net/l/by-sa/3.0/88x31.png
+[cc-by-sa-shield]: https://img.shields.io/badge/License-CC%20BY--SA%203.0-lightgrey.svg
+
+
