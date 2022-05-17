@@ -1,3 +1,6 @@
+
+![说明-中文版本](./README_zh.md)
+
 ## employees
 
 ### Data Model
@@ -7,6 +10,24 @@ Here is a sample database with employees as an example. It contains tables such 
 ![table data model / Employees Structure ][er employees ori]
 
 Details about the original mode, see [Employees Structure][er employees ori]
+
+### table in employees
+
+| table name   | comments              | data (rows)
+|--------------|-----------------------|-------
+| departments  | Departments           | 9
+| dept_emp     | employee department   | 331603
+| dept_manager | Department Manager    | 24
+| employees    | employees             | 300024
+| salaries     | Employee Compensation | 2844047
+| titles       | Staff positions       | 443308
+
+### views
+
+| View Name | comments
+| -------------------|--------
+| v_emp_latest_date  | the last date of the employee, including in-service or resignation
+| v_current_dept_emp | department employees based on their last status
 
 ### where does it come from
 
@@ -28,7 +49,7 @@ The original database is from [Employees Sample Database][mysql sample employees
 * *employees.sql* used
 * used data from *load_\*.dump* files
 * Data has been reordered randomly
-* unused views and functions in objects.sql
+* Views and functions in *objects.sql* have not been created yet
 * The *test_\*.sh* tests in the original code base cannot be executed
 
 ### Prerequisites
@@ -56,13 +77,13 @@ sqlite is just an executable file that can be placed in any directory contained 
 2. Go to the repository directory on the command line
 
 ````
-    cd PATH_TO_DB_SAMPLE_SCHEMAS/employees
+cd PATH_TO_DB_SAMPLE_SCHEMAS/employees
 ````
 
 3. Unzip the csv data file
 
 ````
-    unzip ./data/data.zip
+unzip ./data/data.zip
 ````
 
 4. Execute the SQL script according to the actual database service used to create tables and import sample data
@@ -230,40 +251,40 @@ If you have logged in under mysql cli, you can do this
   </summary>
   
   ````
-      ➜ mysql --user=root --force -sN < import-mysql.sql
-      start at 2022-05-17 11:52:50
-      CREATING DATABASE STRUCTURE
-      Dropping everything
-      ERROR 1051 (42S02) at line 3 in file: './sql/drop.sql': Unknown table 'employees.v_current_dept_emp'
-      ERROR 1051 (42S02) at line 4 in file: './sql/drop.sql': Unknown table 'employees.v_emp_latest_date'
-      Creating tables
-      storage engine: InnoDB
-      Creating views
-  
-      LOADING departments
-      employees.departments: Records: 9 Deleted: 0 Skipped: 0 Warnings: 0
-  
-      LOADING employees
-      employees.employees: Records: 300024 Deleted: 0 Skipped: 0 Warnings: 0
-      LOADING dept_emp
-      employees.dept_emp: Records: 331603 Deleted: 0 Skipped: 0 Warnings: 0
-      LOADING dept_manager
-      employees.dept_manager: Records: 24 Deleted: 0 Skipped: 0 Warnings: 0
-      LOADING salaries
-      employees.salaries: Records: 2844047 Deleted: 0 Skipped: 0 Warnings: 0
-      LOADING titles
-      employees.titles: Records: 443308 Deleted: 0 Skipped: 0 Warnings: 0
-  
-      Ended at 2022-05-17 11:53:58
-      It took 00:01:08.000000
+  ➜ mysql --user=root --force -sN < import-mysql.sql
+  start at 2022-05-17 11:52:50
+  CREATING DATABASE STRUCTURE
+  Dropping everything
+  ERROR 1051 (42S02) at line 3 in file: './sql/drop.sql': Unknown table 'employees.v_current_dept_emp'
+  ERROR 1051 (42S02) at line 4 in file: './sql/drop.sql': Unknown table 'employees.v_emp_latest_date'
+  Creating tables
+  storage engine: InnoDB
+  Creating views
 
-      Counting tables record
-      dept_emp 331603
-      dept_manager 24
-      titles 443308
-      salaries 2844047
-      employees 300024
-      departments 9
+  LOADING departments
+  employees.departments: Records: 9 Deleted: 0 Skipped: 0 Warnings: 0
+
+  LOADING employees
+  employees.employees: Records: 300024 Deleted: 0 Skipped: 0 Warnings: 0
+  LOADING dept_emp
+  employees.dept_emp: Records: 331603 Deleted: 0 Skipped: 0 Warnings: 0
+  LOADING dept_manager
+  employees.dept_manager: Records: 24 Deleted: 0 Skipped: 0 Warnings: 0
+  LOADING salaries
+  employees.salaries: Records: 2844047 Deleted: 0 Skipped: 0 Warnings: 0
+  LOADING titles
+  employees.titles: Records: 443308 Deleted: 0 Skipped: 0 Warnings: 0
+
+  Ended at 2022-05-17 11:53:58
+  It took 00:01:08.000000
+
+  Counting tables record
+  dept_emp 331603
+  dept_manager 24
+  titles 443308
+  salaries 2844047
+  employees 300024
+  departments 9
   ````
 
 </details>
@@ -278,6 +299,7 @@ This work is licensed under the [Attribution-Share Alike 3.0 Unlocalized Version
 
 [![CC BY-SA 3.0][cc-by-sa-image]][cc-by-sa]
 
+<!-- reference links -->
 
 [license]: https://creativecommons.org/licenses/by-sa/3.0/deed.zh
 [where is comes from]: https://github.com/datacharmer/test_db#where-it-comes-from
@@ -290,5 +312,3 @@ This work is licensed under the [Attribution-Share Alike 3.0 Unlocalized Version
 [cc-by-sa]: https://creativecommons.org/licenses/by-sa/3.0/
 [cc-by-sa-image]: https://licensebuttons.net/l/by-sa/3.0/88x31.png
 [cc-by-sa-shield]: https://img.shields.io/badge/License-CC%20BY--SA%203.0-lightgrey.svg
-
-
