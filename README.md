@@ -27,9 +27,9 @@ Some examples are derived from MySQL or postgres. In order to make SQL as genera
 
 In this project, each individual sample database is managed in a separate directory.
 
-sample repository | size | postgres | sqlite | MySQL | source
------------|----------|--------|-------|--------
-employees | about 160M | ✔ | ✔ | ✔ | [MySQL Employees Sample Database][mysql sample employees]
+| sample repository | size | postgres | sqlite | MySQL | source
+|-------------------|------|----------|--------|-------|-------
+| employees         | about 160M | ✔ | ✔ | ✔ | [MySQL Employees Sample Database][mysql sample employees]
 
 ## How to use the sample database
 
@@ -40,11 +40,11 @@ Each sample database is independent. When using the sample repositories, just fo
 
 Some sample databases, because of the large number of data records, tend to use the commands supported by each database to load csv data files from local, rather than using `insert ... values()` . Therefore, when this happens, SQL scripts can only be executed on the db cli console, and most GUI clients do not recognize these built-in commands.
 
-Database | Data Load Commands
----------|------------
-postgres | `\copy TABLE_NAME from CSV_FILE delimiter ',' csv header;`
-sqlite | `.import --csv --skip 1 CSV_FILE file TABLE_NAME`
-mysql | `\!mysqlimport --user=root --local --delete --fields-enclosed-by='"' --lines-terminated-by='\n' --fields-terminated-by=', ' --ignore-lines=1 The csv data file corresponding to the DATABASE_NAME TABLE_NAME`
+| Database | Data Load Commands
+|----------|------------
+| postgres | `\copy TABLE_NAME from CSV_FILE delimiter ',' csv header;`
+| sqlite   | `.import --csv --skip 1 CSV_FILE file TABLE_NAME`
+| mysql    | `\!mysqlimport --user=root --local --delete --fields-enclosed-by='"' --lines-terminated-by='\n' --fields-terminated-by=', ' --ignore-lines=1 The csv data file corresponding to the DATABASE_NAME TABLE_NAME`
 
 > Security improvements in mysql 8 impose restrictions on command operations. At the mysql cli prompt, use `load data locale infile into table...` , the server and client must have relevant directory permissions and set server parameters, which increases the configuration steps. To reduce this complexity, when loading the mysql sample data in this project, use the mysqlimport command, which corresponds to `load data infile`.
 
