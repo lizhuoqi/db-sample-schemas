@@ -1,3 +1,5 @@
+![说明-中文版本](./README_zh.md)
+
 # db sample schemas
 
 db sample schemas, collects some popular sample databases for Postgres, MySQL, Sqlite3. Each sample database in the collection can be used to create tables, views, and load sample data into the database using a single SQL script, suitable for demonstrations, testing, learning database features, learning SQL, and more.
