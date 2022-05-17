@@ -44,7 +44,7 @@ Some sample databases, because of the large number of data records, tend to use 
 |----------|------------
 | postgres | `\copy TABLE_NAME from CSV_FILE delimiter ',' csv header;`
 | sqlite   | `.import --csv --skip 1 CSV_FILE file TABLE_NAME`
-| mysql    | `\!mysqlimport --user=root --local --delete --fields-enclosed-by='"' --lines-terminated-by='\n' --fields-terminated-by=', ' --ignore-lines=1 The csv data file corresponding to the DATABASE_NAME TABLE_NAME`
+| mysql    | `\!mysqlimport --user=root --local --delete --fields-enclosed-by='"' --lines-terminated-by='\n' --fields-terminated-by=', ' --ignore-lines=1 DATABASE_NAME TABLE_NAME.csv`
 
 > Security improvements in mysql 8 impose restrictions on command operations. At the mysql cli prompt, use `load data locale infile into table...` , the server and client must have relevant directory permissions and set server parameters, which increases the configuration steps. To reduce this complexity, when loading the mysql sample data in this project, use the mysqlimport command, which corresponds to `load data infile`.
 
