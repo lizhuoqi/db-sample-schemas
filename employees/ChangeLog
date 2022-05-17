@@ -1,0 +1,7 @@
+1.0.0 2022-05-16
+	- Based on https://github.com/datacharmer/test_db
+	- Initial release
+	- Reprogram
+	- Tables, Views, Data form dump files
+	- No partitioned table yet
+	- Tested on Postgres 14.2, sqlite3.37, mysql8.0.28
