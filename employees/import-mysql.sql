@@ -1,9 +1,9 @@
 -- usage: mysql --user=root -sN < import-mysql.sql
 --        or mysql --user=root -sN and `\. import-mysql.sql`
 
-DROP DATABASE IF EXISTS employees1;
-CREATE DATABASE employees1;
-use employees1;
+DROP DATABASE IF EXISTS employees;
+CREATE DATABASE employees;
+use employees;
 
 set @start_stamp = now();
 select concat('start at ', date_format(@start_stamp, '%Y-%m-%d %H:%i:%s')) as start_at;
@@ -55,5 +55,9 @@ select concat('Ended at ', now()) as end_dt;
 select concat('It tooks ', timediff( now(), @start_stamp )) as timespan;
 
 SET foreign_key_checks = 1;
+
+select '' as " ";
+select 'Counting tables record' as doing;
+source ./sql/result.sql
 
 \quit -- ? won't work

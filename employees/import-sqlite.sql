@@ -40,4 +40,8 @@ where  key = 'now';
 
 drop table variable;
 
+select '' as " ";
+SELECT 'Counting tables record' as doing;
+.read ./sql/result.sql
+
 .quit

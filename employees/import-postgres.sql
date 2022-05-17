@@ -43,5 +43,9 @@ SELECT 'LOADING titles' as doing;
 SELECT 'Ended at ' || current_timestamp as doing;
 select 'It tooks ' || (current_timestamp - TIMESTAMP :'start_stamp');
 
+\echo
+select 'Counting tables record' as doing;
+\i ./sql/result.sql
+
 -- quit cli
 \q
