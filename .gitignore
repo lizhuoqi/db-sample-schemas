@@ -1,5 +1,5 @@
 temp/
-data/
+# data/
 .DS_store
 *.sqlite
 *.csv
