@@ -13,7 +13,7 @@ Details about the original mode, see [Employees Structure][er employees ori]
 
 ### table in employees
 
-| table name   | comments              | data (rows)
+| table name   | Description           | data (rows)
 |--------------|-----------------------|-------
 | departments  | Departments           | 9
 | dept_emp     | employee department   | 331603
@@ -24,7 +24,7 @@ Details about the original mode, see [Employees Structure][er employees ori]
 
 ### views
 
-| View Name | comments
+| View Name | Description
 | -------------------|--------
 | v_emp_latest_date  | the last date of the employee, including in-service or resignation
 | v_current_dept_emp | department employees based on their last status
