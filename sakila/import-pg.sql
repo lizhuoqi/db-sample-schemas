@@ -40,7 +40,7 @@ select 'LOADING category' as doing;
 select 'LOADING language' as doing;
 \copy language from data/language.csv delimiter ',' csv header;
 select 'LOADING film' as doing;
-\copy film from data/film.csv delimiter ',' csv header;
+\copy film from data/film.csv delimiter ',' csv header NULL '\N';
 select 'LOADING film_actor' as doing;
 \copy film_actor from data/film_actor.csv delimiter ',' csv header;
 select 'LOADING film_category' as doing;
@@ -62,9 +62,9 @@ select 'LOADING staff' as doing;
 select 'LOADING inventory' as doing;
 \copy inventory from data/inventory.csv delimiter ',' csv header;
 select 'LOADING rental' as doing;
-\copy rental from data/rental.csv delimiter ',' csv header;
+\copy rental from data/rental.csv delimiter ',' csv header  NULL '\N';
 select 'LOADING payment' as doing;
-\copy payment from data/payment.csv delimiter ',' csv header;
+\copy payment from data/payment.csv delimiter ',' csv header  NULL '\N';
 
 -- ===========================================
 
