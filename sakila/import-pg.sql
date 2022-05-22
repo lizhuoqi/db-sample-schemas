@@ -27,6 +27,7 @@ select 'Patching' as doing;
 \i ./sql/pre-pg.sql
 select 'Creating tables' as doing;
 \i ./sql/tables.sql
+\i ./sql/comments.sql
 \i ./sql/post-created-pg.sql
 select 'Creating views' as doing;
 \i ./sql/views.sql
