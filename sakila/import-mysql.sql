@@ -29,7 +29,7 @@ select '' as " ";
 
 -- ===========================================
 
-SELECT 'LOADING departments' as doing;
+SELECT 'LOADING DATA' as doing;
 -- only 8.0.19
 \! mysqlimport --user=root --local --delete --fields-enclosed-by='"' --lines-terminated-by='\n' --fields-terminated-by=',' --ignore-lines=1 sakila1 ./data/actor.csv
 \! mysqlimport --user=root --local --delete --fields-enclosed-by='"' --lines-terminated-by='\n' --fields-terminated-by=',' --ignore-lines=1 sakila1 ./data/category.csv
@@ -56,14 +56,15 @@ source ./sql/post-data-loaded-mysql.sql
 
 -- ===========================================
 
-select '' as " ";
-select concat('Ended at ', now()) as end_dt;
-select concat('It tooks ', timediff( now(), @start_stamp )) as timespan;
-
 SET foreign_key_checks = 1;
 
 select '' as " ";
 select 'Counting tables record' as doing;
 source ./sql/result.sql
 
+-- ===========================================
+
+select '' as " ";
+select concat('Ended at ', now()) as end_dt;
+select concat('It tooks ', timediff( now(), @start_stamp )) as timespan;
 \quit -- ? won't work
