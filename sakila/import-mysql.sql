@@ -16,20 +16,24 @@ SET foreign_key_checks = 0;
 
 -- ===========================================
 
-SELECT 'CREATING DATABASE STRUCTURE' as doing;
+select '' as ' ';
+SELECT 'CREATING DATABASE STRUCTURE' as ' ';
+select '========================================' as ' ';
+select '' as ' ';
 
-select 'Dropping everything' as doing;
+select '* Dropping everything' as ' ';
 source ./sql/drop.sql
-select 'Creating tables' as doing;
+select '* Creating tables' as doing;
 source ./sql/tables.sql
 source ./sql/post-created-mysql.sql
-select 'Creating views' as doing;
+select '* Creating views' as doing;
 source ./sql/views.sql
-select '' as " ";
 
--- ===========================================
+select '' as ' ';
+SELECT 'LOADING DATA' as ' ';
+select '========================================' as ' ';
+select '' as ' ';
 
-SELECT 'LOADING DATA' as doing;
 -- only 8.0.19
 \! mysqlimport --user=root --local --delete --fields-enclosed-by='"' --lines-terminated-by='\n' --fields-terminated-by=',' --ignore-lines=1 sakila1 ./data/actor.csv
 \! mysqlimport --user=root --local --delete --fields-enclosed-by='"' --lines-terminated-by='\n' --fields-terminated-by=',' --ignore-lines=1 sakila1 ./data/category.csv
@@ -48,23 +52,25 @@ source ./data/staff-mysql.sql
 \! mysqlimport --user=root --local --delete --fields-enclosed-by='"' --lines-terminated-by='\n' --fields-terminated-by=',' --ignore-lines=1 sakila1 ./data/rental.csv
 \! mysqlimport --user=root --local --delete --fields-enclosed-by='"' --lines-terminated-by='\n' --fields-terminated-by=',' --ignore-lines=1 sakila1 ./data/payment.csv
 
--- ===========================================
+select '' as ' ';
+SELECT 'Post Install After Data Loaded' as ' ';
+select '========================================' as ' ';
+select '' as ' ';
 
-select '' as " ";
-select 'Setting after data loaded. e.g. auto_increment with sequence' as doing;
 source ./sql/post-data-loaded-mysql.sql
 
--- ===========================================
-
-SET foreign_key_checks = 1;
-
-select '' as " ";
-select 'Counting tables record' as doing;
+select '' as ' ';
+SELECT 'Counting tables record' as ' ';
+select '========================================' as ' ';
+select '' as ' ';
 source ./sql/result.sql
 
--- ===========================================
-
-select '' as " ";
+select '' as ' ';
+SELECT '--------------------------------------' as ' ';
+select '' as ' ';
 select concat('Ended at ', now()) as end_dt;
 select concat('It tooks ', timediff( now(), @start_stamp )) as timespan;
+
+
+SET foreign_key_checks = 1;
 \quit -- ? won't work

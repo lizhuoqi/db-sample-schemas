@@ -1,4 +1,4 @@
-select 'actor' tab, count(1) from actor union all
+select 'actor' tab, count(1) rows_count from actor union all
 select 'address' tab, count(1) from address union all
 select 'category' tab, count(1) from category union all
 select 'city' tab, count(1) from city union all

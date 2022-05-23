@@ -20,10 +20,9 @@
 drop table if exists payment;
 drop table if exists rental;
 drop table if exists inventory;
--- The table store/staff refer to each other,
--- "drop column" rather then "drop foreign key"
--- because sqlite has no "drop foreign key" clause.
-alter table store drop column manager_staff_id;
+-- The table store/staff refer to each other.
+-- sqlite3 cli "syntax error", mysql cli "table store not exists"
+alter table store drop constraint store_manager_staff_id_fkey;
 drop table if exists staff;
 drop table if exists customer;
 drop table if exists store;

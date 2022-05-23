@@ -10,77 +10,92 @@ CREATE DATABASE sakila;
 \c sakila;
 
 select current_timestamp as start_stamp \gset
-\echo
-\echo start at :start_stamp
-\echo
+\echo '\n' start at :start_stamp '\n'
 
 -- doing the real stuff
 
 -- ===========================================
 
-SELECT 'CREATING DATABASE STRUCTURE' as doing;
+\echo CREATING DATABASE STRUCTURE
+\echo '========================================\n'
 
-
-select 'Dropping everything' as doing;
+\echo * Dropping everything
 \i ./sql/drop.sql
-select 'Patching' as doing;
+
+\echo * Patching
 \i ./sql/pre-pg.sql
-select 'Creating tables' as doing;
+
+\echo * Creating tables
 \i ./sql/tables.sql
 \i ./sql/post-created-pg.sql
-select 'Creating views' as doing;
-\i ./sql/views.sql
-select '' as " ";
--- ===========================================
 
-select 'LOADING actor' as doing;
+\echo * Creating views
+\i ./sql/views.sql
+
+\echo '\n' LOADING Data
+\echo '========================================\n'
+
+\echo -n * LOADING actor
 \copy actor from data/actor.csv delimiter ',' csv header;
-select 'LOADING category' as doing;
+
+\echo -n * LOADING category
 \copy category from data/category.csv delimiter ',' csv header;
-select 'LOADING language' as doing;
+
+\echo -n * LOADING language
 \copy language from data/language.csv delimiter ',' csv header;
-select 'LOADING film' as doing;
+
+\echo -n * LOADING film
 \copy film from data/film.csv delimiter ',' csv header NULL '\N';
-select 'LOADING film_actor' as doing;
+
+\echo -n * LOADING film_actor
 \copy film_actor from data/film_actor.csv delimiter ',' csv header;
-select 'LOADING film_category' as doing;
+
+\echo -n * LOADING film_category
 \copy film_category from data/film_category.csv delimiter ',' csv header;
-select 'LOADING film_text' as doing;
+
+\echo -n * LOADING film_text
 \copy film_text from data/film_text.csv delimiter ',' csv header;
-select 'LOADING country' as doing;
+
+\echo -n * LOADING country
 \copy country from data/country.csv delimiter ',' csv header;
-select 'LOADING city' as doing;
+
+\echo -n * LOADING city
 \copy city from data/city.csv delimiter ',' csv header;
-select 'LOADING address' as doing;
+
+\echo -n * LOADING address
 \copy address from data/address.csv delimiter ',' csv header;
-select 'LOADING store' as doing;
+
+\echo -n * LOADING store
 \copy store from data/store.csv delimiter ',' csv header;
-select 'LOADING customer' as doing;
+
+\echo -n * LOADING customer
 \copy customer from data/customer.csv delimiter ',' csv header;
-select 'LOADING staff' as doing;
+
+\echo * LOADING staff
 \i ./data/staff-pg.sql
-select 'LOADING inventory' as doing;
+
+\echo -n * LOADING inventory
 \copy inventory from data/inventory.csv delimiter ',' csv header;
-select 'LOADING rental' as doing;
+
+\echo -n * LOADING rental
 \copy rental from data/rental.csv delimiter ',' csv header  NULL '\N';
-select 'LOADING payment' as doing;
+
+\echo -n * LOADING payment
 \copy payment from data/payment.csv delimiter ',' csv header  NULL '\N';
 
--- ===========================================
+
+\echo '\nPost Install After Data Loaded'
+\echo '========================================\n'
 
 \i ./sql/post-data-loaded-pg.sql
 \i ./sql/comments.sql
 
--- ===========================================
-
-\echo
-select 'Counting tables record' as doing;
+\echo '\nCounting tables record'
+\echo '========================================\n'
 \i ./sql/result.sql
 
--- ===========================================
-
+\echo '--------------------------------------\n'
 SELECT 'Ended at ' || current_timestamp as doing;
 select 'It tooks ' || (current_timestamp - TIMESTAMP :'start_stamp');
 
--- quit cli
 \q
