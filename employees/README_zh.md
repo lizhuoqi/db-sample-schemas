@@ -234,7 +234,7 @@ unzip ./data/data.zip
 
 在另一个命令行终端执行
 
-    mysql --user=root --force -sN < import-postgres.sql
+    mysql --user=root --force -sN < import-mysql.sql
 
 若已登录到 mysql cli 下的，可以这样
   

@@ -234,7 +234,7 @@ First, start your mysql database service instance
 
 Execute in another command line terminal
 
-    mysql --user=root --force -sN < import-postgres.sql
+    mysql --user=root --force -sN < import-mysql.sql
 
 If you have logged in under mysql cli, you can do this
   
