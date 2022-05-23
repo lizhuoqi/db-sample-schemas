@@ -1,5 +1,11 @@
-
+--
 -- auto increment
+-- 
+-- sqlite3 has no 
+-- "alter table ... alter column ... autoincrement",
+-- if it must be done, can only be recreated.
+-- For now, there is no autoincrement support.
+-- It could be an exercize for you.
 
 --
 -- update csv null values "\N" to sqlite null

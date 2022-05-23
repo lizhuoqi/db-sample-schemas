@@ -1,5 +1,6 @@
 /*
-tables, created by this order:
+tables, created by this order, dropped reversed.
+==========================
 
 actor
 category
@@ -17,6 +18,13 @@ staff
 inventory
 rental
 payment
+
+notes
+======
+Sqlite3 does not have the syntax
+"alter table ... alter column ... autoincrement". 
+If necessary, you can add the "autoincrement" keyword 
+to the primary key field of each table whose data type is integer.
 */
 
 --
