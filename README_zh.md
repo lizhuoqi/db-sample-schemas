@@ -16,6 +16,8 @@ db sample schemas，收集一些热门的示例数据库，可用于 Postgres、
 * SQLite
 * PostgreSQL
 
+<!-- todo， 各数据库的测试版本 -->
+
 > 为什么没有 Oracle、SQL Server、DB2 这些呢？🤔 
 > 
 > 因本项目当前的主要目的是教学，比如，如何在数据库编写 SQL ，开发视图、函数等，以训练数据开发的思维。在实际工作中，数据库的部署，通常由专门的人员负责，并且有专门从事IT环境部署的人员或团队。部署技能不是本项目的目的，对于平常不搞安装部署的人来说，操作难度太大，并且运行在个人桌面笔记本时会占用较多资源。
@@ -27,9 +29,10 @@ db sample schemas，收集一些热门的示例数据库，可用于 Postgres、
 
 本项目中，每一个独立示例数据库均以一个单独的目录管理。
 
-示例库      | 大小 | postgres | sqlite | MySQL | 来源
------------|----------|--------|-------|--------
-employees  | 约160M | ✔ | ✔ | ✔ | [MySQL Employees Sample Database][mysql sample employees] 
+示例库      | 大小      | postgres | sqlite | MySQL | 来源
+-----------|----------|----------|--------|-------|------
+employees  | 约160M | ✔ | ✔ | ✔ | [MySQL Employees Sample Database][mysql sample employees]
+sakila     |        | ✔ | ✔ | ✔ | [Sakila Sample Database Version 1.2][sakila sample database]
 
 ## 如何使用示例数据库
 
@@ -56,3 +59,4 @@ mysql    | `\! mysqlimport --user=root --local --delete --fields-enclosed-by='"'
 ---
 [mysql sample employees]:https://github.com/datacharmer/test_db
 [oracle sample schemas]: https://github.com/oracle-samples/db-sample-schemas
+[sakila sample database]: https://dev.mysql.com/doc/sakila/en/

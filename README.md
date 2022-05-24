@@ -29,9 +29,10 @@ Some examples are derived from MySQL or postgres. In order to make SQL as genera
 
 In this project, each individual sample database is managed in a separate directory.
 
-| sample repository | size | postgres | sqlite | MySQL | source
+| sample repository | size | postgres | sqlite | MySQL | original repose
 |-------------------|------|----------|--------|-------|-------
 | employees         | about 160M | ✔ | ✔ | ✔ | [MySQL Employees Sample Database][mysql sample employees]
+| sakila            |            | ✔ | ✔ | ✔ | [Sakila Sample Database Version 1.2][sakila sample database]
 
 ## How to use the sample database
 
@@ -57,3 +58,4 @@ The table model design and sample data in all sample databases are not original.
 ---
 [mysql sample employees]: https://github.com/datacharmer/test_db
 [oracle sample schemas]: https://github.com/oracle-samples/db-sample-schemas
+[sakila sample database]: https://dev.mysql.com/doc/sakila/en/
