@@ -1,0 +1,11 @@
+1.0.0 2022-05-23
+	- Based on Sample https://dev.mysql.com/doc/sakila/en/
+	- Original Source code: https://downloads.mysql.com/docs/sakila-db.zip
+	- Initial release
+	- Reprogram
+	- Tables, Data
+	- No Views, Functions, Stored Procedures yet
+	- Tested on Postgres 14.2, sqlite3.37, mysql8.0.28
+
+
+
