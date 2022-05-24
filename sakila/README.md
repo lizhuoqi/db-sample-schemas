@@ -393,7 +393,7 @@ If you have logged in under mysql cli, you can do this
 
 </details>
 
-### Free statement
+### DISCLAIMER
 
 The data in the example is fabricated and it does not correspond to anyone in the real world. Any similarity is purely coincidental.
 
