@@ -31,8 +31,8 @@ In this project, each individual sample database is managed in a separate direct
 
 | sample repository | size | postgres | sqlite | MySQL | original repose
 |-------------------|------|----------|--------|-------|-------
-| employees         | about 160M | ✔ | ✔ | ✔ | [MySQL Employees Sample Database][mysql sample employees]
-| sakila            |            | ✔ | ✔ | ✔ | [Sakila Sample Database Version 1.2][sakila sample database]
+| employees         | 6 tables, about 160 M | ✔ | ✔ | ✔ | [MySQL Employees Sample Database][mysql sample employees]
+| sakila            | 16 tables, about 5 M          | ✔ | ✔ | ✔ | [Sakila Sample Database Version 1.2][sakila sample database]
 
 ## How to use the sample database
 

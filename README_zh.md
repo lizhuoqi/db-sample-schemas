@@ -31,8 +31,8 @@ db sample schemas，收集一些热门的示例数据库，可用于 Postgres、
 
 示例库      | 大小      | postgres | sqlite | MySQL | 来源
 -----------|----------|----------|--------|-------|------
-employees  | 约160M | ✔ | ✔ | ✔ | [MySQL Employees Sample Database][mysql sample employees]
-sakila     |        | ✔ | ✔ | ✔ | [Sakila Sample Database Version 1.2][sakila sample database]
+employees  | 6 张表, 约160M | ✔ | ✔ | ✔ | [MySQL Employees Sample Database][mysql sample employees]
+sakila     | 16 张表 , 约 5 M       | ✔ | ✔ | ✔ | [Sakila Sample Database Version 1.2][sakila sample database]
 
 ## 如何使用示例数据库
 
