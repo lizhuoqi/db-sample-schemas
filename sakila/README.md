@@ -4,7 +4,7 @@
 
 This is an example of DVD rental. It contains tables such as Movies, Actors, Inventory, Stores, Rentals, Payments, etc.
 
-![table data model][sakila er ori]
+![table data model][sakila er en]
 
 Instructions for the original model design (in English), see [Structure][sakila structure]
 
