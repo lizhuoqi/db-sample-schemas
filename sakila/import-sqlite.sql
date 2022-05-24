@@ -17,6 +17,7 @@ CREATING DATABASE STRUCTURE
 ========================================
 ';
 
+select '* Dropping everything' as doing;
 .read ./sql/drop.sql
 select '* Creating tables' as doing;
 .read ./sql/tables.sql

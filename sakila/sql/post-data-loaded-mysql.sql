@@ -20,7 +20,7 @@ alter table store modify column store_id int2 auto_increment;
 --
 -- FOREIGN KEYS
 -- 
-
+-- table "store" and "staff" refer to echo other.
 alter table store add CONSTRAINT store_manager_staff_id_fkey 
 FOREIGN KEY (manager_staff_id) REFERENCES staff (staff_id) 
 ON DELETE RESTRICT ON UPDATE CASCADE;
