@@ -70,10 +70,10 @@ select current_timestamp as start_stamp \gset
 \copy playlist_track from data/playlist_track.csv delimiter ',' csv header;
 
 
--- \echo '\nPost Install After Data Loaded'
--- \echo '========================================\n'
--- 
--- \i ./sql/comments.sql
+\echo '\nPost Install After Data Loaded'
+\echo '========================================\n'
+
+\i ./sql/comments.sql
 
 \echo '\nCounting tables record'
 \echo '========================================\n'
