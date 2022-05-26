@@ -144,90 +144,90 @@ sqlite3   |  `insert ...` sql | 效率要比 *.import* 的慢很多。
   <summary>结果</summary>
 
     
-    ```
-	~/youwu.today/sqllab/sample/db-sample-schemas/chinook git:(develop)
-	➜  psql < import-pg.sql
-	ERROR:  database "chinook" is being accessed by other users
-	DETAIL:  There are 2 other sessions using the database.
-	ERROR:  database "chinook" already exists
-	You are now connected to database "chinook" as user "macbook".
-	
- 	start at 2022-05-26 14:23:15.915499+08
-	
-	CREATING DATABASE STRUCTURE
-	========================================
-	
-	- Dropping everything
-	DROP TABLE
-	DROP TABLE
-	DROP TABLE
-	DROP TABLE
-	DROP TABLE
-	DROP TABLE
-	DROP TABLE
-	DROP TABLE
-	DROP TABLE
-	DROP TABLE
-	DROP TABLE
-	- Creating tables
-	CREATE TABLE
-	CREATE TABLE
-	CREATE TABLE
-	CREATE TABLE
-	CREATE TABLE
-	CREATE TABLE
-	CREATE TABLE
-	CREATE TABLE
-	CREATE TABLE
-	CREATE TABLE
-	CREATE TABLE
-	- Creating views
-	
- 	LOADING Data
-	========================================
-	
-	- LOADING artistCOPY 275
-	- LOADING albumCOPY 347
-	- LOADING employeeCOPY 8
-	- LOADING customerCOPY 59
-	- LOADING genreCOPY 25
-	- LOADING invoiceCOPY 412
-	- LOADING media_typeCOPY 5
-	- LOADING trackCOPY 3503
-	- LOADING invoice_lineCOPY 2240
-	- LOADING playlistCOPY 18
-	- LOADING playlist_trackCOPY 8715
-	
-	Post Install After Data Loaded
-	========================================
-	
-	COMMENT
-	
-	... 🥱 ...
-
-	COMMENT
-	
-	Counting tables record
-	========================================
-	
- 	artist         |        275
- 	album          |        347
- 	employee       |          8
- 	customer       |         59
- 	genre          |         25
- 	invoice        |        412
- 	media_type     |          5
- 	track          |       3503
- 	invoice_line   |       2240
- 	playlist       |         18
- 	playlist_track |       8715
-	
-	--------------------------------------
-	
- 	Ended at 2022-05-26 14:23:16.373602+08
-	
- 	It tooks 00:00:00.458396
-    ```
+  ```
+  ~/youwu.today/sqllab/sample/db-sample-schemas/chinook git:(develop)
+  ➜  psql < import-pg.sql
+  ERROR:  database "chinook" is being accessed by other users
+  DETAIL:  There are 2 other sessions using the database.
+  ERROR:  database "chinook" already exists
+  You are now connected to database "chinook" as user "macbook".
+  
+  start at 2022-05-26 14:23:15.915499+08
+  
+  CREATING DATABASE STRUCTURE
+  ========================================
+  
+  - Dropping everything
+  DROP TABLE
+  DROP TABLE
+  DROP TABLE
+  DROP TABLE
+  DROP TABLE
+  DROP TABLE
+  DROP TABLE
+  DROP TABLE
+  DROP TABLE
+  DROP TABLE
+  DROP TABLE
+  - Creating tables
+  CREATE TABLE
+  CREATE TABLE
+  CREATE TABLE
+  CREATE TABLE
+  CREATE TABLE
+  CREATE TABLE
+  CREATE TABLE
+  CREATE TABLE
+  CREATE TABLE
+  CREATE TABLE
+  CREATE TABLE
+  - Creating views
+  
+	  LOADING Data
+  ========================================
+  
+  - LOADING artistCOPY 275
+  - LOADING albumCOPY 347
+  - LOADING employeeCOPY 8
+  - LOADING customerCOPY 59
+  - LOADING genreCOPY 25
+  - LOADING invoiceCOPY 412
+  - LOADING media_typeCOPY 5
+  - LOADING trackCOPY 3503
+  - LOADING invoice_lineCOPY 2240
+  - LOADING playlistCOPY 18
+  - LOADING playlist_trackCOPY 8715
+  
+  Post Install After Data Loaded
+  ========================================
+  
+  COMMENT
+  
+  ... 🥱 ...
+  
+  COMMENT
+  
+  Counting tables record
+  ========================================
+  
+   artist         |        275
+   album          |        347
+   employee       |          8
+   customer       |         59
+   genre          |         25
+   invoice        |        412
+   media_type     |          5
+   track          |       3503
+   invoice_line   |       2240
+   playlist       |         18
+   playlist_track |       8715
+  
+  --------------------------------------
+  
+  Ended at 2022-05-26 14:23:16.373602+08
+  
+  It tooks 00:00:00.458396
+  ```
 
 </details>
 
@@ -253,54 +253,54 @@ sqlite3   |  `insert ...` sql | 效率要比 *.import* 的慢很多。
   <summary>结果</summary>
 
   ```
-    ~/youwu.today/sqllab/sample/db-sample-schemas/chinook git:(develop)
-	➜  sqlite3 chinook.sqlite < import-sqlite.sql
-	start at :2022-05-26 06:20:39
-
-	CREATING DATABASE STRUCTURE
-	========================================
-
-	* Dropping everything
-	* Creating tables
-	* Creating views
-
-	LOADING Data
-	========================================
-
-	* LOADING artist
-	* LOADING album
-	* LOADING employee
-	* LOADING customer
-	* LOADING genre
-	* LOADING invoice
-	* LOADING media_type
-	* LOADING track
-	* LOADING invoice_line
-	* LOADING playlist
-	* LOADING playlist_trac
-
-	Counting tables record
-	========================================
-
-	|      tab       | rows_count |
-	|----------------|------------|
-	| artist         | 275        |
-	| album          | 347        |
-	| employee       | 8          |
-	| customer       | 59         |
-	| genre          | 25         |
-	| invoice        | 412        |
-	| media_type     | 5          |
-	| track          | 3503       |
-	| invoice_line   | 2240       |
-	| playlist       | 18         |
-	| playlist_track | 8715       |
-
-	--------------------------------------
-
-	Ended at 2022-05-26 06:20:39
-
-	It tooks 00:00.000
+  ~/youwu.today/sqllab/sample/db-sample-schemas/chinook git:(develop)
+  ➜  sqlite3 chinook.sqlite < import-sqlite.sql
+  start at :2022-05-26 06:20:39
+  
+  CREATING DATABASE STRUCTURE
+  ========================================
+  
+  * Dropping everything
+  * Creating tables
+  * Creating views
+  
+  LOADING Data
+  ========================================
+  
+  * LOADING artist
+  * LOADING album
+  * LOADING employee
+  * LOADING customer
+  * LOADING genre
+  * LOADING invoice
+  * LOADING media_type
+  * LOADING track
+  * LOADING invoice_line
+  * LOADING playlist
+  * LOADING playlist_trac
+  
+  Counting tables record
+  ========================================
+  
+  |      tab       | rows_count |
+  |----------------|------------|
+  | artist         | 275        |
+  | album          | 347        |
+  | employee       | 8          |
+  | customer       | 59         |
+  | genre          | 25         |
+  | invoice        | 412        |
+  | media_type     | 5          |
+  | track          | 3503       |
+  | invoice_line   | 2240       |
+  | playlist       | 18         |
+  | playlist_track | 8715       |
+  
+  --------------------------------------
+  
+  Ended at 2022-05-26 06:20:39
+  
+  It tooks 00:00.000
   ```
 </details>
 
@@ -331,50 +331,50 @@ sqlite3   |  `insert ...` sql | 效率要比 *.import* 的慢很多。
   </summary>
   
   ```
-    ➜  mysql --user=root --force -sN < import-mysql.sql
-	start at 2022-05-26 14:21:46
-
-	CREATING DATABASE STRUCTURE
-	========================================
-
-	* Dropping everything
-	* Creating tables
-	* Creating views
-
-	LOADING DATA
-	========================================
-
-	* LOADING artist
-	* LOADING album
-	* LOADING employee
-	* LOADING customer
-	* LOADING genre
-	* LOADING invoice
-	* LOADING media_type
-	* LOADING track
-	* LOADING invoice_line
-	* LOADING playlist
-	* LOADING playlist_trac
-
-	Counting tables record
-	========================================
-
-	artist	275
-	album	347
-	employee	8
-	customer	59
-	genre	25
-	invoice	412
-	media_type	5
-	track	3503
-	invoice_line	2240
-	playlist	18
-	playlist_track	8715
-
-	--------------------------------------
-
-	Ended at 2022-05-26 14:21:52
-	It tooks 00:00:06.000000
+  ➜  mysql --user=root --force -sN < import-mysql.sql
+  start at 2022-05-26 14:21:46
+  
+  CREATING DATABASE STRUCTURE
+  ========================================
+  
+  * Dropping everything
+  * Creating tables
+  * Creating views
+  
+  LOADING DATA
+  ========================================
+  
+  * LOADING artist
+  * LOADING album
+  * LOADING employee
+  * LOADING customer
+  * LOADING genre
+  * LOADING invoice
+  * LOADING media_type
+  * LOADING track
+  * LOADING invoice_line
+  * LOADING playlist
+  * LOADING playlist_trac
+  
+  Counting tables record
+  ========================================
+  
+  artist	275
+  album	347
+  employee	8
+  customer	59
+  genre	25
+  invoice	412
+  media_type	5
+  track	3503
+  invoice_line	2240
+  playlist	18
+  playlist_track	8715
+  
+  --------------------------------------
+  
+  Ended at 2022-05-26 14:21:52
+  It tooks 00:00:06.000000
   ```
 
 </details>

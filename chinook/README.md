@@ -138,8 +138,8 @@ If logged in to psql cli
 <details>
   <summary>Results</summary>
 
-    
-    ````
+ 
+```
 ~/youwu.today/sqllab/sample/db-sample-schemas/chinook git:(develop)
 ➜ psql < import-pg.sql
 ERROR: database "chinook" is being accessed by other users
@@ -222,7 +222,7 @@ Counting tables record
  Ended at 2022-05-26 14:23:16.373602+08
 
  It took 00:00:00.458396
-    ````
+```
 
 </details>
 
@@ -247,8 +247,8 @@ If the *chinook.sqlite* file does not exist, sqlite3 will automatically create i
 <details>
   <summary>Results</summary>
 
-  ````
-    ~/youwu.today/sqllab/sample/db-sample-schemas/chinook git:(develop)
+```
+~/youwu.today/sqllab/sample/db-sample-schemas/chinook git:(develop)
 ➜ sqlite3 chinook.sqlite < import-sqlite.sql
 start at :2022-05-26 06:20:39
 
@@ -296,7 +296,7 @@ Counting tables record
 Ended at 2022-05-26 06:20:39
 
 It took 00:00.000
-  ````
+```
 </details>
 
 ----
@@ -325,8 +325,8 @@ If you have logged in under mysql cli, you can do this
     result
   </summary>
   
-  ````
-    ➜ mysql --user=root --force -sN < import-mysql.sql
+```
+➜ mysql --user=root --force -sN < import-mysql.sql
 start at 2022-05-26 14:21:46
 
 CREATING DATABASE STRUCTURE
@@ -370,7 +370,7 @@ playlist_track 8715
 
 Ended at 2022-05-26 14:21:52
 It took 00:00:06.000000
-  ````
+```
 
 </details>
 
