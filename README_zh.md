@@ -32,7 +32,8 @@ db sample schemas，收集一些热门的示例数据库，可用于 Postgres、
 示例库      | 大小      | postgres | sqlite | MySQL | 来源
 -----------|----------|----------|--------|-------|------
 employees  | 6 张表, 约160M | ✔ | ✔ | ✔ | [MySQL Employees Sample Database][mysql sample employees]
-sakila     | 16 张表 , 约 5 M       | ✔ | ✔ | ✔ | [Sakila Sample Database Version 1.2][sakila sample database]
+sakila     | 16 张表 , 约 5 M    | ✔ | ✔ | ✔ | [Sakila Sample Database Version 1.2][sakila sample database]
+chinook    | 11 张表 , 约 500 K+ | ✔ | ✔ | ✔ | [Chinook Database - Version 1.4][chinook sample database]
 
 ## 如何使用示例数据库
 
@@ -60,3 +61,4 @@ mysql    | `\! mysqlimport --user=root --local --delete --fields-enclosed-by='"'
 [mysql sample employees]:https://github.com/datacharmer/test_db
 [oracle sample schemas]: https://github.com/oracle-samples/db-sample-schemas
 [sakila sample database]: https://dev.mysql.com/doc/sakila/en/
+[chinook sample database]: https://github.com/lerocha/chinook-database

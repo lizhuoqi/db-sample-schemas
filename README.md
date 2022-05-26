@@ -32,7 +32,8 @@ In this project, each individual sample database is managed in a separate direct
 | sample repository | size | postgres | sqlite | MySQL | original repose
 |-------------------|------|----------|--------|-------|-------
 | employees         | 6 tables, about 160 M | ✔ | ✔ | ✔ | [MySQL Employees Sample Database][mysql sample employees]
-| sakila            | 16 tables, about 5 M          | ✔ | ✔ | ✔ | [Sakila Sample Database Version 1.2][sakila sample database]
+| sakila            | 16 tables, about 5 M    | ✔ | ✔ | ✔ | [Sakila Sample Database Version 1.2][sakila sample database]
+| chinook           | 11 tables , about 500 K | ✔ | ✔ | ✔ | [Chinook Database - Version 1.4][chinook sample database]
 
 ## How to use the sample database
 
