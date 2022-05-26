@@ -1,5 +1,5 @@
-temp/
-# data/
+**/temp/
+**/data/*.csv
+**/data/*.sql
 .DS_store
 *.sqlite
-*.csv
