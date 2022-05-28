@@ -3,6 +3,7 @@
 views:
     v_customer_list
     v_film_list
+    v_nicer_but_slower_film_list  
 
 */
 
@@ -56,4 +57,32 @@ left   join actor
 using  (actor_id)
 group  by film.film_id, cat.name;
 
+
+--
+-- View structure for view `v_nicer_but_slower_film_list`
+--
+
+create view v_nicer_but_slower_film_list as
+select film.film_id       as fid
+     , film.title
+     , film.description
+     , cat.name           as category
+     , film.rental_rate   as price
+     , film.length
+     , film.rating
+     , group_concat(
+               upper(substr(actor.first_name, 1, 1)) || lower(substr(actor.first_name, 2))  
+               || ' ' 
+               || upper(substr(actor.last_name, 1, 1)) || lower(substr(actor.last_name, 2)) 
+               , ', ')    as actors
+from   film
+left   join film_category
+using  (film_id)
+left   join category      cat
+using  (category_id)
+left   join film_actor
+using  (film_id)
+left   join actor
+using  (actor_id)
+group  by film.film_id, cat.name;
  
