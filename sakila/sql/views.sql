@@ -5,6 +5,7 @@ views:
     v_film_list
     v_nicer_but_slower_film_list  
     v_staff_list
+    v_sales_by_store
 
 */
 
@@ -106,4 +107,27 @@ from   staff
 inner  join address using (address_id)
 left   join city    using (city_id)
 left   join country using (country_id);
+
+
+--
+-- View structure for view `v_sales_by_store`
+--
+
+create view v_sales_by_store
+as
+select city || ', ' || country as store
+     , ( select first_name || ', ' || last_name
+         from   staff
+         where  staff.staff_id = store.manager_staff_id
+       )               as manager
+     , sum(pay.amount) as total_sales
+from   payment as pay
+inner  join rental       using (rental_id)
+inner  join inventory    using (inventory_id)
+inner  join store       using (store_id)
+inner  join address      using (address_id)
+inner  join city         using (city_id)
+inner  join country      using (country_id)
+group  by store.store_id, country, city
+order  by country, city;
  
