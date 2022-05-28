@@ -17,7 +17,7 @@ SET('Trailers','Commentaries','Deleted Scenes','Behind the Scenes');
 -- recreate views with function `concat`
 --
 
-create view v_customer_list as 
+create or replace view v_customer_list as 
 select cust.customer_id as id
        -- mysql 8 can't get the right name by using concat operator "||"
      , cust.first_name || ' ' || cust.last_name as name
