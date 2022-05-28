@@ -6,6 +6,7 @@ views:
     v_nicer_but_slower_film_list  
     v_staff_list
     v_sales_by_store
+    v_sales_by_film_category
 
 */
 
@@ -130,4 +131,23 @@ inner  join city         using (city_id)
 inner  join country      using (country_id)
 group  by store.store_id, country, city
 order  by country, city;
+
+--
+-- View structure for view `v_sales_by_film_category`
+--
+-- Note that total sales will add up to >100% because
+-- some titles belong to more than 1 category
+--
+
+create view v_sales_by_film_category as
+select category.name   as category
+     , sum(pay.amount) as total_sales
+from   payment as pay
+left   join rental        using (rental_id)
+left   join inventory     using (inventory_id)
+-- left   join film          using (film_id)
+left   join film_category using (film_id)
+left   join category      using (category_id)
+group  by category.name
+order  by 2 desc;
  
