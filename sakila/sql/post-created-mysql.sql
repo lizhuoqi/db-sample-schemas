@@ -93,3 +93,23 @@ using  (film_id)
 left   join actor
 using  (actor_id)
 group  by film.film_id, cat.name;
+
+--
+-- recreated view `v_staff_list`
+--
+
+CREATE VIEW v_staff_list
+AS
+select staff_id       as id
+     , concat(first_name, ' ', last_name)
+                      as name
+     , address
+     , postal_code    as "zip code"
+     , phone
+     , city
+     , country
+     , staff.store_id as sid
+from   staff
+inner  join address using (address_id)
+left   join city    using (city_id)
+left   join country using (country_id);
