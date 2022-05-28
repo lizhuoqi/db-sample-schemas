@@ -7,6 +7,7 @@ views:
     v_staff_list
     v_sales_by_store
     v_sales_by_film_category
+    v_actor_info
 
 */
 
@@ -150,4 +151,42 @@ left   join film_category using (film_id)
 left   join category      using (category_id)
 group  by category.name
 order  by 2 desc;
+
+
+--
+-- View structure for view `v_actor_info`
+--
+
+create view v_actor_info as
+with actor_films as
+(
+  select act.actor_id
+       , first_name
+       , last_name
+       , category.name category
+       , film.title
+  from   actor act
+  left   join film_actor    using (actor_id)
+  left   join film_category using (film_id)
+  left   join category      using (category_id)
+  left   join film          using (film_id)
+  order  by film.title
+)
+, actor_category as
+(
+  select actor_id
+       , first_name
+       , last_name
+       , category
+       , category || ': ' || group_concat(title , ', ') films
+  from   actor_films
+  group  by actor_id,first_name, last_name, category
+  order  by category
+)
+select actor_id
+     , first_name
+     , last_name
+     , group_concat(films, '; ') film_info
+from   actor_category
+group  by actor_id, first_name, last_name;
  

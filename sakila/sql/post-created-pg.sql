@@ -42,3 +42,32 @@ using  (film_id)
 left   join actor
 using  (actor_id)
 group  by film.film_id, cat.name;
+
+
+--
+-- recreate view `v_actor_info`
+--
+
+create or replace view v_actor_info as
+with actor_films as
+(
+  select act.actor_id
+       , first_name
+       , last_name
+       , category.name category
+       , string_agg(film.title, ', '  order by film.title) films
+  from   actor act
+  left   join film_actor    using (actor_id)
+  left   join film_category using (film_id)
+  left   join category      using (category_id)
+  left   join film          using (film_id)
+  group  by act.actor_id, category
+)
+select actor_id
+     , first_name
+     , last_name
+     , string_agg(
+         category || ': ' || films
+         , '; ' order by category )  as film_info
+from   actor_films
+group  by actor_id, first_name, last_name;
