@@ -1,5 +1,14 @@
 -- drop everything in database 
 
+drop view v_customer_list;
+drop view v_film_list;
+drop view v_nicer_but_slower_film_list;
+drop view v_staff_list;
+drop view v_sales_by_store;
+drop view v_sales_by_film_category;
+drop view v_actor_info;
+
+
 -- drop table if exists actor cascade;
 -- drop table if exists category cascade;
 -- drop table if exists language cascade;
