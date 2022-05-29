@@ -45,7 +45,7 @@ The sakila sample database is from [Chinook Database - Version 1.4][chinook samp
 ### Adjustments for postgres, sqlite3, mysql compatibility
 
 
-| serial number | original script | postgres | sqlite3 | mysql
+| # | original script | postgres | sqlite3 | mysql
 |-----|-------------------------------|---------- |------------|------
 | 1 | employee.birth_date timestamp | timestamp | timestamp | datetime
 | 2 | employee.hire_date timestamp | timestamp | timestamp | datetime
