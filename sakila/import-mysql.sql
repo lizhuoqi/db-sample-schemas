@@ -25,9 +25,9 @@ select '* Dropping everything' as ' ';
 source ./sql/drop.sql
 select '* Creating tables' as doing;
 source ./sql/tables.sql
-source ./sql/post-created-mysql.sql
 select '* Creating views' as doing;
 source ./sql/views.sql
+source ./sql/post-created-mysql.sql
 
 select '' as ' ';
 SELECT 'LOADING DATA' as ' ';

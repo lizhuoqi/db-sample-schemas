@@ -98,7 +98,7 @@ group  by film.film_id, cat.name;
 -- recreated view `v_staff_list`
 --
 
-CREATE VIEW v_staff_list
+create or replace view v_staff_list
 AS
 select staff_id       as id
      , concat(first_name, ' ', last_name)

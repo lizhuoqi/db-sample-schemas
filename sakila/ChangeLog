@@ -1,3 +1,5 @@
+1.1.0 2022-05-29
+    - port all the views from sakila-schema.sql
 1.0.0 2022-05-23
 	- Based on Sample https://dev.mysql.com/doc/sakila/en/
 	- Original Source code: https://downloads.mysql.com/docs/sakila-db.zip

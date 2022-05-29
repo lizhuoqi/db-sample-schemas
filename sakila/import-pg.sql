@@ -19,68 +19,68 @@ select current_timestamp as start_stamp \gset
 \echo CREATING DATABASE STRUCTURE
 \echo '========================================\n'
 
-\echo * Dropping everything
+\echo * Dropping everything'\n'
 \i ./sql/drop.sql
 
-\echo * Patching
+\echo '\n'* Patching'\n'
 \i ./sql/pre-pg.sql
 
-\echo * Creating tables
+\echo '\n'* Creating tables'\n'
 \i ./sql/tables.sql
-\i ./sql/post-created-pg.sql
 
-\echo * Creating views
+\echo '\n'* Creating views'\n'
 \i ./sql/views.sql
+\i ./sql/post-created-pg.sql
 
 \echo '\n' LOADING Data
 \echo '========================================\n'
 
-\echo -n * LOADING actor
+\echo -n * LOADING actor ''
 \copy actor from data/actor.csv delimiter ',' csv header;
 
-\echo -n * LOADING category
+\echo -n * LOADING category ''
 \copy category from data/category.csv delimiter ',' csv header;
 
-\echo -n * LOADING language
+\echo -n * LOADING language ''
 \copy language from data/language.csv delimiter ',' csv header;
 
-\echo -n * LOADING film
+\echo -n * LOADING film ''
 \copy film from data/film.csv delimiter ',' csv header NULL '\N';
 
-\echo -n * LOADING film_actor
+\echo -n * LOADING film_actor ''
 \copy film_actor from data/film_actor.csv delimiter ',' csv header;
 
-\echo -n * LOADING film_category
+\echo -n * LOADING film_category ''
 \copy film_category from data/film_category.csv delimiter ',' csv header;
 
-\echo -n * LOADING film_text
+\echo -n * LOADING film_text ''
 \copy film_text from data/film_text.csv delimiter ',' csv header;
 
-\echo -n * LOADING country
+\echo -n * LOADING country ''
 \copy country from data/country.csv delimiter ',' csv header;
 
-\echo -n * LOADING city
+\echo -n * LOADING city ''
 \copy city from data/city.csv delimiter ',' csv header;
 
-\echo -n * LOADING address
+\echo -n * LOADING address ''
 \copy address from data/address.csv delimiter ',' csv header;
 
-\echo -n * LOADING store
+\echo -n * LOADING store ''
 \copy store from data/store.csv delimiter ',' csv header;
 
-\echo -n * LOADING customer
+\echo -n * LOADING customer ''
 \copy customer from data/customer.csv delimiter ',' csv header;
 
 \echo * LOADING staff
 \i ./data/staff-pg.sql
 
-\echo -n * LOADING inventory
+\echo -n * LOADING inventory ''
 \copy inventory from data/inventory.csv delimiter ',' csv header;
 
-\echo -n * LOADING rental
+\echo -n * LOADING rental ''
 \copy rental from data/rental.csv delimiter ',' csv header  NULL '\N';
 
-\echo -n * LOADING payment
+\echo -n * LOADING payment ''
 \copy payment from data/payment.csv delimiter ',' csv header  NULL '\N';
 
 
