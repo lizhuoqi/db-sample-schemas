@@ -38,6 +38,7 @@ The sakila sample database is from [Chinook Database - Version 1.4][chinook samp
 
 * *All 11 tables and data in Chinook_postgres.sql*
 * *employee.birth_date*, *employee.hire_date* field data type is adjusted to `datetime`, which is the value range of individual dates that exceed the mysql timestamp type.
+* * Identifiers are uniformly named in lower-snakecase (using "[]", "\`\`", camelcase to write sql is too unhuman), more convenient for keystrokes
 * Data has been reordered randomly
 * Only tables and data from the sample database are used. Other *C#* applications do not use and will not in the future.
 

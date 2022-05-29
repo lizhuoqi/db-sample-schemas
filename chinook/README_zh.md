@@ -36,6 +36,7 @@ sakila 示例数据库来自于 [Chinook Database - Version 1.4][chinook sample 
 
 * *Chinook_postgres.sql* 中全部 11 张表和数据
 * *employee.birth_date*、*employee.hire_date* 字段数据类型调整为 `datetime`，为个别日期超过 mysql timestamp 类型的值范围。
+* 标识符统一使用小写 snake case 方式命名（使用“[]”、“\`\`”、“驼峰” 来写 sql 实在太反人类），更方便 ⌨️ 手工连续输入
 * 数据已按随机方式重新排序
 * 只使用了示例数据库中的 表、数据。其他 *C#* 应用程序不使用，未来也不会。
 
