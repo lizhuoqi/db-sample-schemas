@@ -58,6 +58,7 @@ select '========================================' as ' ';
 select '' as ' ';
 
 source ./sql/post-data-loaded-mysql.sql
+source ./sql/routines-mysql.sql
 
 select '' as ' ';
 SELECT 'Counting tables record' as ' ';
