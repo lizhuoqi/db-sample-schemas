@@ -20,6 +20,7 @@ SELECT 'CREATING DATABASE STRUCTURE' as doing;
 \i ./sql/drop.sql
 \i ./sql/tables.sql
 \i ./sql/views.sql
+\i ./sql/routines-pg.sql
 
 SELECT 'LOADING departments' as doing;
 \copy departments from data/departments.csv delimiter ',' csv header;
