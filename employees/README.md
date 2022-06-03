@@ -28,6 +28,19 @@ Details about the original mode, see [Employees Structure][er employees ori]
 | -------------------|--------
 | v_emp_latest_date  | the last date of the employee, including in-service or resignation
 | v_current_dept_emp | department employees based on their last status
+| v_full_departments | all departments with manager
+
+### routines
+
+|name                 | postgres   | mysql      | sqlite3
+|---------------------|------------|------------|---------
+| get_emp_dept_id     | function   | function   | not supported
+| get_emp_dept_name   | function   | function   | not supported
+| get_emp_name        | function   | function   | not supported
+| get_current_manager | function   | function   | not supported
+| show_departments    | function   | procedure  | not supported
+| employees_usage     | function   | function   | not supported
+| show_employees_help | procedure  | procedure  | not supported
 
 ### where does it come from
 
