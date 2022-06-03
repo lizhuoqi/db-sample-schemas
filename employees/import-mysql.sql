@@ -21,6 +21,8 @@ select 'Creating tables' as doing;
 source ./sql/tables.sql
 select 'Creating views' as doing;
 source ./sql/views.sql
+select 'Creating Routines' as doing;
+source ./sql/routines-mysql.sql
 select '' as " ";
 
 SELECT 'LOADING departments' as doing;
