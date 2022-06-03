@@ -27,6 +27,18 @@
 | v_current_dept_emp  | 根据员工最后状态查询部门员工
 | v_full_departments  | 带有经理的所有部门
 
+### 过程
+
+|name                 | postgres   | mysql      | sqlite3
+|---------------------|------------|------------|---------
+| get_emp_dept_id     | function   | function   | 不支持
+| get_emp_dept_name   | function   | function   | 不支持
+| get_emp_name        | function   | function   | 不支持
+| get_current_manager | function   | function   | 不支持
+| show_departments    | function   | procedure  | 不支持
+| employees_usage     | function   | function   | 不支持
+| show_employees_help | procedure  | procedure  | 不支持
+
 ### 它来自哪里
 
 原数据库来自于 [Employees Sample Database][mysql sample employees]，它的代码在 [test_db][mysql sample employees codebase] 公开。
