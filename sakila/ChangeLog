@@ -1,3 +1,5 @@
+1.2.0 2022-06-03
+	- port routines from get_customer_balance for mysql/Postgres
 1.1.0 2022-05-29
     - port all the views from sakila-schema.sql
 1.0.0 2022-05-23

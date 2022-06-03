@@ -29,12 +29,28 @@ Instructions for the original model design (in English), see [Structure][sakila 
 | staff | staff | 2
 | store | Store | 2
 
-<!-- ### view -->
+### views in sakila
 
-<!-- | view name | function
-| --------------------|--------
-| |
-| | -->
+| view name               | comments
+| ------------------------|--------
+| v_customer_list               |
+| v_film_list                   |
+| v_nicer_but_slower_film_list  |
+| v_staff_list                  |     
+| v_sales_by_store              |
+| v_sales_by_film_category      |
+| v_actor_info                  |
+
+### routines
+
+name                       | postgres   | mysql      | sqlite3
+---------------------------|------------|------------|---------
+get_customer_balance       | fucntion   | fucntion   | not supported
+inventory_held_by_customer | fucntion   | fucntion   | not supported
+inventory_in_stock         | fucntion   | fucntion   | not supported
+rewards_report             | fucntion   | procedure  | not supported
+film_in_stock              | procedure  | procedure  | not supported
+film_not_in_stock          | procedure  | procedure  | not supported
 
 ### where does it come from
 

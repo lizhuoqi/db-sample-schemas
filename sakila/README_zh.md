@@ -29,12 +29,21 @@
 | staff         | 职员    | 2
 | store         | 门店    | 2
 
-<!-- ### 视图 -->
+### 视图
 
-<!-- | 视图名               | 作用
+| 视图名               |  注释
 | --------------------|--------
-|    | 
-|   |  -->
+| v_customer_list               |
+| v_film_list                   |
+| v_nicer_but_slower_film_list  |
+| v_staff_list                  |     
+| v_sales_by_store              |
+| v_sales_by_film_category      |
+| v_actor_info                  |
+
+### 过程
+
+
 
 ### 它来自哪里
 
