@@ -103,7 +103,8 @@ BEGIN
   RETURN v_customer_id;
 END //
 
-
+-- call film_in_stock(1,2,@out);
+-- select @out;
 CREATE PROCEDURE film_in_stock(IN p_film_id INT, IN p_store_id INT, OUT p_film_count INT)
 READS SQL DATA
 BEGIN
