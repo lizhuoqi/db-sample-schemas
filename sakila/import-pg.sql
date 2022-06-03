@@ -21,6 +21,7 @@ select current_timestamp as start_stamp \gset
 
 \echo * Dropping everything'\n'
 \i ./sql/drop.sql
+\i ./sql/drop-pg.sql
 
 \echo '\n'* Patching'\n'
 \i ./sql/pre-pg.sql
@@ -88,6 +89,7 @@ select current_timestamp as start_stamp \gset
 \echo '========================================\n'
 
 \i ./sql/post-data-loaded-pg.sql
+\i ./sql/routines-pg.sql
 \i ./sql/comments.sql
 
 \echo '\nCounting tables record'
