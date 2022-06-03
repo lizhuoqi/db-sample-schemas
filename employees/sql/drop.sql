@@ -2,6 +2,7 @@
 
 drop view v_current_dept_emp;
 drop view v_emp_latest_date;
+drop view v_full_departments;
 DROP TABLE IF EXISTS dept_emp;
 drop table if exists dept_manager;
 drop table if exists titles;
