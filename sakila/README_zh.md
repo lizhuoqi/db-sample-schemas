@@ -43,6 +43,14 @@
 
 ### 过程
 
+名称                       | postgres   | mysql      | sqlite3
+---------------------------|------------|------------|---------
+get_customer_balance       | fucntion   | fucntion   |不支持
+inventory_held_by_customer | fucntion   | fucntion   |不支持
+inventory_in_stock         | fucntion   | fucntion   |不支持
+rewards_report             | fucntion   | procedure  |不支持
+film_in_stock              | procedure  | procedure  |不支持
+film_not_in_stock          | procedure  | procedure  |不支持
 
 
 ### 它来自哪里

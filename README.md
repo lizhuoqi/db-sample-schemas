@@ -60,3 +60,4 @@ The table model design and sample data in all sample databases are not original.
 [mysql sample employees]: https://github.com/datacharmer/test_db
 [oracle sample schemas]: https://github.com/oracle-samples/db-sample-schemas
 [sakila sample database]: https://dev.mysql.com/doc/sakila/en/
+[chinook sample database]: https://github.com/lerocha/chinook-database
