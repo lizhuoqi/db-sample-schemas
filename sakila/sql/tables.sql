@@ -240,6 +240,7 @@ CREATE TABLE address (
   -- Add GEOMETRY column for MySQL 5.7.5 and higher
   -- Also include SRID attribute for MySQL 8.0.3 and higher
   -- /*!50705 location GEOMETRY */ /*!80003 SRID 0 */ /*!50705 NOT NULL,*/
+  location varchar(255) not null,
   last_update TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY  (address_id),
   -- /*!50705 SPATIAL KEY `idx_location` (location),*/

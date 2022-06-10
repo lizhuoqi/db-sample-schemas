@@ -4,8 +4,8 @@ functions:
     get_customer_balance
     inventory_held_by_customer
     inventory_in_stock
-procedure:
     rewards_report
+procedure:
     film_in_stock
     film_not_in_stock
 */

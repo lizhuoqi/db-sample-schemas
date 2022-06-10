@@ -27,3 +27,16 @@ ON DELETE RESTRICT ON UPDATE CASCADE;
 
 -- msyql cause
 -- todo CONSTRAINT film_original_language_id_fkey FOREIGN KEY (original_language_id) REFERENCES language (language_id) ON DELETE RESTRICT ON UPDATE CASCADE
+
+--
+-- address.location
+--
+-- turn varchar location to geometry from varchar
+alter table address 
+rename column location to location2;
+alter table address
+add column location geometry /*!80003 SRID 0 */    after phone;
+update address set location = ST_GeomFromText(location2);
+commit;
+alter table address drop column location2;
+/*!50705 alter table address modify column location geometry not null  */;
